@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - 伊犁州智慧教育云平台</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- 左侧菜单 -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-shape"></div>
+                    </div>
+                    <div class="logo-text">
+                        <h2>管理后台</h2>
+                        <p>Yili Education Platform</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul class="menu-list">
+                    <li class="menu-item active" data-page="exam-management">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>考试报名管理</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="user-management">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-users"></i>
+                            <span>用户管理</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="info-management">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>信息发布管理</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="basic-settings">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-cog"></i>
+                            <span>基础设置</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="admin-main">
+            <!-- 顶部导航栏 -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span class="breadcrumb-item">管理后台</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="breadcrumb-item active" id="currentPage">考试报名管理</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="user-name">胡锋</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="index.html" class="back-to-home">
+                        <i class="fas fa-home"></i>
+                        返回首页
+                    </a>
+                </div>
+            </header>
+
+            <!-- 页面内容区域 -->
+            <div class="admin-content">
+                <!-- 考试报名管理页面 -->
+                <div class="page-content active" id="exam-management">
+                    <div class="page-header">
+                        <h1>考试报名管理</h1>
+                        <p>管理考试报名信息、审核报名申请</p>
+                    </div>
+                    
+                    <div class="content-cards">
+                        <!-- 考试列表 -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3>考试列表</h3>
+                                <button class="ant-btn ant-btn-primary" id="newExamBtn">
+                                    <i class="fas fa-plus"></i>
+                                    新建考试
+                                </button>
+                            </div>
+                            <div class="table-container">
+                                <table class="ant-table">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>考试名称</th>
+                                            <th>报名时间</th>
+                                            <th>考试时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2025年伊犁州面向社会公开招聘中学教师</td>
+                                            <td>2025-06-28 10:00 ~ 2025-07-05 10:00</td>
+                                            <td>2025-07-10 10:00 ~ 2025-07-10 12:00</td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link">报名审核</button>
+                                                    <button class="ant-btn ant-btn-link">编辑</button>
+                                                    <button class="ant-btn ant-btn-link">考试编排</button>
+                                                    <button class="ant-btn ant-btn-link">成绩导入</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>教师专业理论培训考核</td>
+                                            <td>2025-04-02 10:00 ~ 2025-04-08 10:00</td>
+                                            <td>2025-04-30 10:00 ~ 2025-04-30 12:00</td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link">报名审核</button>
+                                                    <button class="ant-btn ant-btn-link">编辑</button>
+                                                    <button class="ant-btn ant-btn-link">考试编排</button>
+                                                    <button class="ant-btn ant-btn-link">成绩导入</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-footer">
+                                    <div class="total">共 2 条</div>
+                                    <div class="pagination-area">
+                                        <div class="ant-pagination">
+                                            <span class="page active">1</span>
+                                        </div>
+                                        <div class="ant-select">
+                                            <select>
+                                                <option>20 条/页</option>
+                                                <option>10 条/页</option>
+                                                <option>50 条/页</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 新建考试页面 -->
+                <div class="page-content" id="new-exam">
+                    <div class="page-header">
+                        <div class="header-with-back">
+                            <button class="ant-btn ant-btn-link back-btn" id="backToList">
+                                <i class="fas fa-arrow-left"></i>
+                                返回列表
+                            </button>
+                            <h1>新建考试</h1>
+                        </div>
+                        <p>创建新的考试项目</p>
+                    </div>
+                    
+                    <div class="content-cards">
+                        <form class="exam-form">
+                            <!-- 考试基本信息 -->
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3>考试基本信息</h3>
+                                </div>
+                                <div class="form-content">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label required">考试类型</label>
+                                            <div class="ant-radio-group">
+                                                <label class="ant-radio">
+                                                    <input type="radio" name="examType" value="teacherRecruitment" checked>
+                                                    <span class="ant-radio-inner"></span>
+                                                    <span class="ant-radio-label">教师招聘</span>
+                                                </label>
+                                                <label class="ant-radio">
+                                                    <input type="radio" name="examType" value="teacherAssessment">
+                                                    <span class="ant-radio-inner"></span>
+                                                    <span class="ant-radio-label">教师能力考核</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label required">考试名称</label>
+                                            <input type="text" class="ant-input" placeholder="请输入考试名称" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label required">报名时间</label>
+                                            <div class="date-time-group">
+                                                <input type="datetime-local" class="ant-input" required>
+                                                <span class="date-separator">至</span>
+                                                <input type="datetime-local" class="ant-input" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label required">考试时间</label>
+                                            <div class="date-time-group">
+                                                <input type="datetime-local" class="ant-input" required>
+                                                <span class="date-separator">至</span>
+                                                <input type="datetime-local" class="ant-input" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 招聘岗位设置 -->
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3>招聘岗位设置</h3>
+                                </div>
+                                <div class="form-content">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="button-group">
+                                                <button type="button" class="ant-btn ant-btn-primary">
+                                                    <i class="fas fa-download"></i>
+                                                    下载模板
+                                                </button>
+                                                <button type="button" class="ant-btn">
+                                                    <i class="fas fa-upload"></i>
+                                                    导入岗位
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="table-container">
+                                                <table class="ant-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>岗位代码</th>
+                                                            <th>县市区</th>
+                                                            <th>招聘学校</th>
+                                                            <th>学段学科</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="4" class="empty-table">
+                                                                <i class="fas fa-inbox"></i>
+                                                                <p>暂无岗位数据，请先导入岗位信息</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 报名设置 -->
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3>报名设置</h3>
+                                </div>
+                                <div class="form-content">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">报名登记信息修改截止时间</label>
+                                            <input type="datetime-local" class="ant-input">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">报名审核设置</label>
+                                            <div class="switch-group">
+                                                <div class="ant-switch">
+                                                    <input type="checkbox" id="reviewSetting" checked>
+                                                    <label for="reviewSetting"></label>
+                                                </div>
+                                                <span class="switch-label">开启报名审核</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">审核管理员设置</label>
+                                            <div class="select-group">
+                                                <select class="ant-select-input">
+                                                    <option value="">请选择审核管理员</option>
+                                                    <option value="admin1">张管理员</option>
+                                                    <option value="admin2">李管理员</option>
+                                                    <option value="admin3">王管理员</option>
+                                                </select>
+                                                <input type="text" class="ant-input" placeholder="设置审核县市">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">考试编排管理员设置</label>
+                                            <select class="ant-select-input">
+                                                <option value="">请选择考试编排管理员</option>
+                                                <option value="arrange1">赵管理员</option>
+                                                <option value="arrange2">钱管理员</option>
+                                                <option value="arrange3">孙管理员</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">成绩管理员设置</label>
+                                            <select class="ant-select-input">
+                                                <option value="">请选择成绩管理员</option>
+                                                <option value="score1">周管理员</option>
+                                                <option value="score2">吴管理员</option>
+                                                <option value="score3">郑管理员</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 表单操作按钮 -->
+                            <div class="form-actions">
+                                <button type="submit" class="ant-btn ant-btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    保存考试
+                                </button>
+                                <button type="button" class="ant-btn" id="cancelExam">
+                                    取消
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 用户管理页面 -->
+                <div class="page-content" id="user-management">
+                    <div class="page-header">
+                        <h1>用户管理</h1>
+                        <p>管理系统用户、权限设置</p>
+                    </div>
+                    
+                    <div class="content-cards">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3>用户列表</h3>
+                                <div class="header-actions">
+                                    <div class="search-filter-group">
+                                        <div class="ant-input-group">
+                                            <input type="text" class="ant-input" placeholder="姓名/手机号/身份证号">
+                                            <button class="ant-btn ant-btn-primary">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                        <div class="ant-select">
+                                            <select class="ant-select-input">
+                                                <option value="">用户类型</option>
+                                                <option value="normal">普通用户</option>
+                                                <option value="admin">管理员</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <table class="ant-table">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>姓名</th>
+                                            <th>手机号</th>
+                                            <th>身份证号</th>
+                                            <th>性别</th>
+                                            <th>民族</th>
+                                            <th>用户类型</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>代坤龙</td>
+                                            <td>13809908776</td>
+                                            <td>621190200003250091</td>
+                                            <td>男</td>
+                                            <td>汉族</td>
+                                            <td><span class="ant-tag ant-tag-gray">普通用户</span></td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link">编辑</button>
+                                                    <button class="ant-btn ant-btn-link">权限</button>
+                                                    <button class="ant-btn ant-btn-link ant-btn-danger">删除</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>陆瑶</td>
+                                            <td>13809908709</td>
+                                            <td>621190200003250092</td>
+                                            <td>女</td>
+                                            <td>维吾尔族</td>
+                                            <td><span class="ant-tag ant-tag-gray">普通用户</span></td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link">编辑</button>
+                                                    <button class="ant-btn ant-btn-link">权限</button>
+                                                    <button class="ant-btn ant-btn-link ant-btn-danger">删除</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>吴明宇</td>
+                                            <td>13809908722</td>
+                                            <td>621190200003250099</td>
+                                            <td>女</td>
+                                            <td>维吾尔族</td>
+                                            <td><span class="ant-tag ant-tag-blue">管理员</span></td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link">编辑</button>
+                                                    <button class="ant-btn ant-btn-link">权限</button>
+                                                    <button class="ant-btn ant-btn-link ant-btn-danger">删除</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 信息发布管理页面 -->
+                <div class="page-content" id="info-management">
+                    <div class="page-header">
+                        <h1>信息发布管理</h1>
+                        <p>管理系统公告、通知信息</p>
+                    </div>
+                    
+                    <div class="content-cards">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <button class="ant-btn ant-btn-primary" id="createNoticeBtn">
+                                    <i class="fas fa-plus"></i>
+                                    发布通知
+                                </button>
+                                <div class="header-actions">
+                                    <div class="ant-input-group">
+                                        <input type="text" class="ant-input" id="noticeSearchInput" placeholder="搜索通知">
+                                        <button class="ant-btn ant-btn-primary" id="noticeSearchBtn">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <table class="ant-table" id="noticeTable">
+                                    <thead>
+                                        <tr>
+                                            <th>名称</th>
+                                            <th>通知分类</th>
+                                            <th>发布时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2025年教师招聘报名开始通知</td>
+                                            <td><span class="ant-tag ant-tag-blue">报名通知</span></td>
+                                            <td>2024-01-15 14:30</td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link"><i class="fas fa-pen"></i> 编辑</button>
+                                                    <button class="ant-btn ant-btn-link ant-btn-danger"><i class="fas fa-trash"></i> 删除</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025年教师能力考核成绩查询公告</td>
+                                            <td><span class="ant-tag ant-tag-purple">成绩查询</span></td>
+                                            <td>2024-01-14 16:45</td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link"><i class="fas fa-pen"></i> 编辑</button>
+                                                    <button class="ant-btn ant-btn-link ant-btn-danger"><i class="fas fa-trash"></i> 删除</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025教师能力考核准考证打印通知</td>
+                                            <td><span class="ant-tag ant-tag-green">考场安排</span></td>
+                                            <td>2024-01-13 09:15</td>
+                                            <td>
+                                                <span class="ant-btn-group">
+                                                    <button class="ant-btn ant-btn-link"><i class="fas fa-pen"></i> 编辑</button>
+                                                    <button class="ant-btn ant-btn-link ant-btn-danger"><i class="fas fa-trash"></i> 删除</button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-footer">
+                                    <div class="total">共 15 条记录</div>
+                                    <div class="pagination-area">
+                                        <div class="ant-pagination" id="noticePagination">
+                                            <button class="ant-btn" data-page="prev">上一页</button>
+                                            <span class="page active" data-page="1">1</span>
+                                            <span class="page" data-page="2">2</span>
+                                            <span class="page" data-page="3">3</span>
+                                            <button class="ant-btn" data-page="next">下一页</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 基础设置页面 -->
+                <div class="page-content" id="basic-settings">
+                    <div class="page-header">
+                        <h1>基础设置</h1>
+                        <p>系统配置、字段配置等设置</p>
+                    </div>
+
+                    <div class="settings-layout">
+                        <!-- 左侧二级菜单 -->
+                        <aside class="settings-side">
+                            <ul class="settings-menu">
+                                <li class="settings-menu-item active" data-tab="register-fields">注册字段设置</li>
+                                <li class="settings-menu-item" data-tab="apply-fields">报名字段设置</li>
+                                <li class="settings-menu-item" data-tab="exam-config">考试设置</li>
+                            </ul>
+                        </aside>
+
+                        <!-- 右侧内容区 -->
+                        <section class="settings-content">
+                            <!-- 注册字段设置（默认） -->
+                            <div class="settings-tab active" id="register-fields">
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <h3>系统预置字段</h3>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="ant-table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 160px;">字段名</th>
+                                                    <th style="width: 120px;">类型</th>
+                                                    <th style="width: 160px;">选项</th>
+                                                    <th style="width: 120px;">必填</th>
+                                                    <th style="width: 120px;">启用</th>
+                                                    <th style="width: 120px;">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>姓名</td>
+                                                    <td>文本</td>
+                                                    <td>—</td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_name_required" checked>
+                                                            <label for="reg_name_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_name_enable" checked>
+                                                            <label for="reg_name_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td><button class="ant-btn ant-btn-link">编辑</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>手机号</td>
+                                                    <td>文本</td>
+                                                    <td>—</td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_phone_required" checked>
+                                                            <label for="reg_phone_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_phone_enable" checked>
+                                                            <label for="reg_phone_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td><button class="ant-btn ant-btn-link">编辑</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>性别</td>
+                                                    <td>单选项</td>
+                                                    <td>
+                                                        <div class="ant-select">
+                                                            <select class="ant-select-input">
+                                                                <option>选项</option>
+                                                                <option>男/女</option>
+                                                            </select>
+                                                            <i class="fas fa-chevron-down"></i>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_gender_required">
+                                                            <label for="reg_gender_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_gender_enable" checked>
+                                                            <label for="reg_gender_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td><button class="ant-btn ant-btn-link">编辑</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>民族</td>
+                                                    <td>单选项</td>
+                                                    <td>
+                                                        <div class="ant-select">
+                                                            <select class="ant-select-input">
+                                                                <option>选项</option>
+                                                                <option>56个民族</option>
+                                                            </select>
+                                                            <i class="fas fa-chevron-down"></i>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_ethnic_required">
+                                                            <label for="reg_ethnic_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_ethnic_enable" checked>
+                                                            <label for="reg_ethnic_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td><button class="ant-btn ant-btn-link">编辑</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>身份证号</td>
+                                                    <td>文本</td>
+                                                    <td>—</td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_id_required" checked>
+                                                            <label for="reg_id_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="reg_id_enable" checked>
+                                                            <label for="reg_id_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td><button class="ant-btn ant-btn-link">编辑</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <h3>自定义字段</h3>
+                                        <button class="ant-btn ant-btn-primary" id="addCustomField">
+                                            <i class="fas fa-plus"></i>
+                                            添加字段
+                                        </button>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="ant-table" id="customFieldsTable">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 160px;">字段名</th>
+                                                    <th style="width: 120px;">类型</th>
+                                                    <th style="width: 120px;">必填</th>
+                                                    <th style="width: 120px;">启用</th>
+                                                    <th style="width: 160px;">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>毕业学校</td>
+                                                    <td>文本</td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="custom_school_required">
+                                                            <label for="custom_school_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="custom_school_enable" checked>
+                                                            <label for="custom_school_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="ant-btn-group">
+                                                            <button class="ant-btn ant-btn-link">编辑</button>
+                                                            <button class="ant-btn ant-btn-link ant-btn-danger">删除</button>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>毕业证编号</td>
+                                                    <td>文本</td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="custom_no_required">
+                                                            <label for="custom_no_required"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="ant-switch">
+                                                            <input type="checkbox" id="custom_no_enable" checked>
+                                                            <label for="custom_no_enable"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="ant-btn-group">
+                                                            <button class="ant-btn ant-btn-link">编辑</button>
+                                                            <button class="ant-btn ant-btn-link ant-btn-danger">删除</button>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 报名字段设置 -->
+                            <div class="settings-tab" id="apply-fields">
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <h3>报名字段设置</h3>
+                                    </div>
+                                    <div class="settings-form">
+                                        <p style="color:#8c8c8c;">可在此配置报名所需字段（演示占位）。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 考试设置 -->
+                            <div class="settings-tab" id="exam-config">
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <h3>考试设置</h3>
+                                    </div>
+                                    <div class="settings-form">
+                                        <div class="form-group">
+                                            <label class="form-label">报名审核默认开启</label>
+                                            <div class="ant-switch">
+                                                <input type="checkbox" id="exam_review_default" checked>
+                                                <label for="exam_review_default"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

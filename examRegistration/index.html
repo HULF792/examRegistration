@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伊犁州智慧教育云平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-container">
+            <!-- 左侧Logo -->
+            <div class="logo-section">
+                <img src="https://dev-s1.plaso.cn/web/exam/static/logo.75d48768.png" alt="logo" height="50">
+            </div>
+
+            <!-- 中间导航链接 -->
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">考试中心</a>
+                <a href="#" class="nav-link">信息通知</a>
+                <a href="#" class="nav-link">我的考试</a>
+            </nav>
+
+            <!-- 右侧用户信息和管理后台链接 -->
+            <div class="user-section">
+                <a href="admin.html" class="admin-link">前往管理后台</a>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="5" fill="#666"/>
+                            <path d="M20 21C20 16.5817 16.4183 13 12 13C7.58172 13 4 16.5817 4 21" stroke="#666" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <span class="user-name">胡锋</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- 考试中心页面 -->
+            <div class="page-content active" id="exam-center">
+                <!-- 考试卡片列表 -->
+                <div class="exam-cards">
+                    <!-- 第一个考试卡片 -->
+                    <div class="exam-card">
+                        <div class="exam-info">
+                            <div class="exam-title">
+                                <div class="exam-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 2H14V14H2V2Z" stroke="#1890FF" stroke-width="1.5"/>
+                                        <path d="M5 5H11" stroke="#1890FF" stroke-width="1.5"/>
+                                        <path d="M5 8H11" stroke="#1890FF" stroke-width="1.5"/>
+                                        <path d="M5 11H9" stroke="#1890FF" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <h3>2025年伊犁州面向社会公开招聘中学教师</h3>
+                            </div>
+                            <div class="exam-details">
+                                <p class="registration-time">报名时间: 2025-06-28 10:00 ~ 2025-07-05 10:00</p>
+                                <p class="exam-time">考试时间: 2025-07-10 10:00 ~ 2025-07-10 12:00</p>
+                            </div>
+                        </div>
+                        <div class="exam-action">
+                            <button class="enter-btn">进入</button>
+                        </div>
+                    </div>
+
+                    <!-- 第二个考试卡片 -->
+                    <div class="exam-card">
+                        <div class="exam-info">
+                            <div class="exam-title">
+                                <div class="exam-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 2H14V14H2V2Z" stroke="#1890FF" stroke-width="1.5"/>
+                                        <path d="M5 5H11" stroke="#1890FF" stroke-width="1.5"/>
+                                        <path d="M5 8H11" stroke="#1890FF" stroke-width="1.5"/>
+                                        <path d="M5 11H9" stroke="#1890FF" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <h3>教师专业理论培训考核</h3>
+                            </div>
+                            <div class="exam-details">
+                                <p class="registration-time">报名时间: 2025-04-02 10:00 ~ 2025-04-08 10:00</p>  
+                                <p class="exam-time">考试时间: 2025-04-30 10:00 ~ 2025-04-30 12:00</p>
+                            </div>
+                        </div>
+                        <div class="exam-action">
+                            <button class="enter-btn">进入</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 我的考试页面 -->
+            <div class="page-content" id="my-exams">
+                <div class="page-header">
+                    <h2>我的考试</h2>
+                    <p>查看您已报名的考试信息</p>
+                </div>
+                
+                <div class="my-exams-container">
+                    <div class="exam-table-card">
+                        <div class="table-container">
+                            <table class="exam-table">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>考试名称</th>
+                                        <th>报名时间</th>
+                                        <th>考试时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>教师专业理论培训考核</td>
+                                        <td>2025-04-02 10:00 ~ 2025-04-08 10:00</td>
+                                        <td>2025-04-30 10:00 ~ 2025-04-30 12:00</td>
+                                        <td>
+                                            <a href="#" class="detail-link">详情</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="table-footer">
+                            <div class="pagination-info">
+                                <span class="total-count">共1条</span>
+                            </div>
+                            <div class="pagination-controls">
+                                <button class="pagination-btn prev-btn" disabled>
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <span class="page-number active">1</span>
+                                <button class="pagination-btn next-btn" disabled>
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="page-size-selector">
+                                    <select class="page-size-select">
+                                        <option value="20">20条/页</option>
+                                        <option value="10">10条/页</option>
+                                        <option value="50">50条/页</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 信息通知页面 -->
+            <div class="page-content" id="info-notice">
+                <div class="page-header">
+                    <h2>信息通知</h2>
+                    <p>查看系统通知和公告信息</p>
+                </div>
+                
+                <div class="notice-container">
+                    <!-- 通知分类导航 -->
+                    <div class="notice-tabs">
+                        <button class="notice-tab active" data-category="all">全部通知</button>
+                        <button class="notice-tab" data-category="registration">报名通知</button>
+                        <button class="notice-tab" data-category="exam">考场安排</button>
+                        <button class="notice-tab" data-category="score">成绩查询</button>
+                        <button class="notice-tab" data-category="other">其它</button>
+                    </div>
+                    
+                    <!-- 通知列表 -->
+                    <div class="notice-list">
+                        <!-- 第一个通知卡片 -->
+                        <div class="notice-item" data-category="registration">
+                            <div class="notice-header">
+                                <div class="notice-tag registration-tag">报名通知</div>
+                                <div class="notice-time">2023-11-15 09:30</div>
+                            </div>
+                            <div class="notice-title">
+                                2024年度全国硕士研究生招生考试报名通知
+                            </div>
+                            <div class="notice-summary">
+                                根据教育部统一安排，2024年全国硕士研究生招生考试报名工作将于2023年10月5日至10月25日进行。请各位考生仔细阅读本通知，按时完成网上报名和现场确认...
+                            </div>
+                            <div class="notice-attachments">
+                                <a href="#" class="attachment-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>招生简章.pdf</span>
+                                </a>
+                                <a href="#" class="attachment-item">
+                                    <i class="fas fa-file-word"></i>
+                                    <span>报名流程.docx</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- 第二个通知卡片 -->
+                        <div class="notice-item" data-category="exam">
+                            <div class="notice-header">
+                                <div class="notice-tag exam-tag">考场安排</div>
+                                <div class="notice-time">2023-12-01 14:15</div>
+                            </div>
+                            <div class="notice-title">
+                                2024年硕士研究生招生考试考场安排公告
+                            </div>
+                            <div class="notice-summary">
+                                我校2024年硕士研究生招生考试考场已安排完毕，请考生登录系统查询个人考场信息。考试时间为2023年12月23日至24日，请提前熟悉考场位置...
+                            </div>
+                            <div class="notice-attachments">
+                                <a href="#" class="attachment-item">
+                                    <i class="fas fa-file-excel"></i>
+                                    <span>考场名单.xlsx</span>
+                                </a>
+                                <a href="#" class="attachment-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>考场地图.jpg</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
